@@ -11,7 +11,7 @@ const Hero = () => {
             
             <TypingAnimation
                 className="font-inter text-blue-300 md:text-6xl sm:text-5xl"
-                text="ALJONARD DELA CRUZZ"/>
+                text="ALJONARD DELA CRUZ"/>
             <p className='text-justify'> 
             An aspiring web developer continuously expanding my expertise in modern technologies like React and Next.js, while actively seeking hands-on experience in front-end development to enhance my skills.</p>
       </div>
