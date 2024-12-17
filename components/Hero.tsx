@@ -7,7 +7,7 @@ const Hero = () => {
     <main className='relative w-full h-screen flex flex-col justify-center items-center p-2 lg:flex-row space-y-10  '>
       <ParticlesBackground />
       <div className=' flex flex-col 2xl:w-1/4 px-5 lg:w-1/2 '>
-            <h1 className='font-mukta text-2xl '>Hi There!, I'm-</h1>
+            <h1 className='font-mukta text-2xl '>Hi There!, I&apos;m-</h1>
             
             <TypingAnimation
                 className="font-inter text-blue-300 md:text-6xl sm:text-5xl"
