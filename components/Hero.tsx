@@ -15,7 +15,7 @@ const Hero = () => {
             <p className='text-justify'> 
             An aspiring web developer continuously expanding my expertise in modern technologies like React and Next.js, while actively seeking hands-on experience in front-end development to enhance my skills.</p>
       </div>
-      <div className='size-96'>
+      <div className=' relative size-96'>
             <img className='object-contain' src="profile.png" alt="" />
       </div>
     </main>
