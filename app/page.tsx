@@ -1,9 +1,11 @@
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className="bg-blue-200">
+    <main className="bg-blue-300 overflow-hidden">
       <Hero/>
-    </div>
+      <Projects/>
+    </main>
   );
 }
