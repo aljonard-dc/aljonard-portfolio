@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 import { loadFull } from "tsparticles";
+
 export default function Particle() {
   const [init, setInit] = useState(false);
   useEffect(() => {
@@ -60,10 +61,10 @@ export default function Particle() {
                 },
             },
               color: {
-                value: "#112D32",
+                value: "#121f21",
               },
               links: {
-                color: "#112D32",
+                color: "#121f21",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -72,7 +73,7 @@ export default function Particle() {
               line_linked: {
                 enable: true,
                 distance: 150,
-                color: "#112d32",
+                color: "#121f21",
                 opacity: 0.4,
                 width: 1
               },

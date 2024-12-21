@@ -1,11 +1,17 @@
 import Hero from "@/app/pages/Hero";
 import Projects from "@/app/pages/Projects";
+import AboutMe from "./pages/AboutMe";
+
 
 export default function Home() {
   return (
-    <main className="bg-blue-300 overflow-hidden">
-      <Hero/>
-      <Projects/>
+    <main className="overflow-hidden">
+      
+      {/* <Hero/>
+      <Projects/> */}
+      <AboutMe/>
+    
+    
     </main>
   );
 }

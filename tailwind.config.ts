@@ -22,17 +22,17 @@ const config: Config = {
   				DEFAULT: '#FFF'
   			},
   			blue: {
-				'50': '#f4f9f9',
-				'100': '#dbecea',
-				'200': '#b7d8d7',
-				'300': '#8abdbc',
-				'400': '#629f9f',
-				'500': '#488384',
-				'600': '#386669',
-				'700': '#305355',
-				'800': '#2a4245',
-				'900': '#26393b',
-				'950': '#121f21',
+  				'50': '#f4f9f9',
+  				'100': '#dbecea',
+  				'200': '#b7d8d7',
+  				'300': '#8abdbc',
+  				'400': '#629f9f',
+  				'500': '#488384',
+  				'600': '#386669',
+  				'700': '#305355',
+  				'800': '#2a4245',
+  				'900': '#26393b',
+  				'950': '#121f21'
   			},
   			coral: {
   				DEFAULT: '#FF6F61',
@@ -109,6 +109,19 @@ const config: Config = {
   			lg: '768px',
   			xl: '1024px',
   			'2px': '1440px'
+  		},
+  		animation: {
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  		},
+  		keyframes: {
+  			orbit: {
+  				'0%': {
+  					transform: 'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'
+  				},
+  				'100%': {
+  					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
+  				}
+  			}
   		}
   	}
   },
