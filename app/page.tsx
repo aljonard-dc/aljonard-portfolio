@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       
-      {/* <Hero/>
-      <AboutMe/>
-      <Projects/> */}
-      <Contact/>
+      <Hero/>
+      {/* <AboutMe/>
+      <Projects/>
+      <Contact/> */}
       
     
     

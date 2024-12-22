@@ -29,25 +29,27 @@ const animationProps = {
   },
 } as AnimationProps;
 
-interface ShinyButtonProps extends HTMLMotionProps<"button"> {
+interface ShinyButtonProps extends HTMLMotionProps<"a"> {
   children: React.ReactNode;
   className?: string;
+  href: string;
 }
 
-const ShinyButton = React.forwardRef<HTMLButtonElement, ShinyButtonProps>(
-  ({ children, className, ...props }, ref) => {
+const ShinyButton = React.forwardRef<HTMLAnchorElement, ShinyButtonProps>(
+  ({ children, className, href, ...props }, ref) => {
     return (
-      <motion.button
+      <motion.a
         ref={ref}
         {...animationProps}
         {...props}
+        href={href}
         className={cn(
           "relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]",
-          className,
+          className
         )}
       >
         <span
-          className="relative block size-full text-lg  tracking-wide dark:font-light dark:text-blue-900"
+          className="relative flex items-center gap-4 size-full text-lg tracking-wide dark:font-light dark:text-blue-900 "
           style={{
             maskImage:
               "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))",
@@ -62,9 +64,9 @@ const ShinyButton = React.forwardRef<HTMLButtonElement, ShinyButtonProps>(
           }}
           className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
         ></span>
-      </motion.button>
+      </motion.a>
     );
-  },
+  }
 );
 
 ShinyButton.displayName = "ShinyButton";
