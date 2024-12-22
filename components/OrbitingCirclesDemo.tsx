@@ -3,7 +3,7 @@ import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[500px] w-[700px] flex-col items-center justify-center overflow-hidden">
+    <div className="bg-none lg:bg-blue-50 rounded-none lg:rounded-custom-shape relative h-[500px] w-[500px] flex items-center justify-center overflow-hidden">
     
 
       {/* Inner Circles */}

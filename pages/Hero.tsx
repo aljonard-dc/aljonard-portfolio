@@ -5,7 +5,7 @@ import TypingAnimation from '@/components/ui/typing-animation'
 
 const Hero = () => {
   return (
-    <section className='bg-blue-300 relative w-full h-auto lg:h-screen flex flex-col justify-center items-center p-2 lg:flex-row space-y-10  '>
+    <section className='bg-blue-200 relative w-full h-auto lg:h-screen flex flex-col justify-center items-center p-2 lg:flex-row space-y-10  '>
       <ParticlesBackground />
       <div className=' flex flex-col 2xl:w-1/4 px-5 lg:w-1/2 '>
     
@@ -17,7 +17,7 @@ const Hero = () => {
             <p className='text-justify '> 
             An aspiring web developer continuously expanding my expertise in modern technologies like React, Typescript, and NextJS, while actively seeking hands-on experience in front-end development to enhance my skills.</p>
       </div>
-      <div className=' relative h-auto size-80 lg:size-96'>
+      <div className='relative h-auto size-80 lg:size-96 mb-0 lg:mb-10'>
             <img className='object-contain' src="profile.png" alt="" />
       </div>
      

@@ -19,6 +19,7 @@ const config: Config = {
   			white: {
   				'100': '#BEC1DD',
   				'200': '#C1C2D3',
+				'300': '#E2E1E1',
   				DEFAULT: '#FFF'
   			},
   			blue: {
@@ -101,7 +102,10 @@ const config: Config = {
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			sm: 'calc(var(--radius) - 4px)',
+			'custom-shape': '60px 0px 60px 60px',
+					
+				
   		},
   		screens: {
   			sm: '325px',

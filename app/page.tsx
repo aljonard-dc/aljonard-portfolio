@@ -1,6 +1,7 @@
-import Hero from "@/app/pages/Hero";
-import Projects from "@/app/pages/Projects";
-import AboutMe from "./pages/AboutMe";
+import Hero from "@/pages/Hero";
+import Projects from "@/pages/Projects";
+import AboutMe from "@/pages/AboutMe";
+import Contact  from "@/pages/Contact";
 
 
 export default function Home() {
@@ -8,8 +9,10 @@ export default function Home() {
     <main className="overflow-hidden">
       
       {/* <Hero/>
-      <Projects/> */}
       <AboutMe/>
+      <Projects/> */}
+      <Contact/>
+      
     
     
     </main>
