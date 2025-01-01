@@ -97,7 +97,9 @@ const config: Config = {
   			gill: [
   				'Gill Sans',
   				'sans-serif'
-  			]
+  			],
+			roboto: 
+			  ["var(--font-roboto)"],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

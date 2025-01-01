@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+h1 {
+  font-family: Mukta, sans-serif;
 }
+
+h2, p {
+  font-family: Inter, sans-serif;
+}
+
 
 @layer base {
   :root {
