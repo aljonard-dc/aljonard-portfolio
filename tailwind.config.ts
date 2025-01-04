@@ -104,7 +104,7 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		screens: {
-  			sm: '325px',
+  			sm: '320px',
   			md: '425px',
   			lg: '768px',
   			xl: '1024px',
