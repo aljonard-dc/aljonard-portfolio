@@ -108,7 +108,7 @@ const config: Config = {
   			md: '425px',
   			lg: '768px',
   			xl: '1024px',
-  			'2px': '1440px'
+  			'2xl': '1440px'
   		}
   	}
   },
