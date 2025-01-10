@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Mukta, Manrope, Roboto } from "next/font/google"; // Import the new fonts
+import { Inter,  Roboto } from "next/font/google"; // Import the new fonts
 import "./globals.css";
 
 // Configure the new fonts
@@ -8,19 +8,6 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
-
-const mukta = Mukta({
-  variable: "--font-mukta",
-  subsets: ["latin"],
-  weight: ["400", "700"], // Regular and Bold
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "600"], // Regular and Semi-Bold
-});
-
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -44,11 +31,7 @@ export default function RootLayout({
         {/* You can also add meta tags here or links for favicons */}
       </head>
       <body
-        className={` ${roboto.variable} antialiased`} // Apply all fonts
-        style={{
-          fontFamily: "var(--font-inter), Inter, sans-serif", // Default to Inter
-        }}
-      >
+        className={` ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

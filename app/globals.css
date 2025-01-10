@@ -3,16 +3,6 @@
 @tailwind utilities;
 
 
-h1 {
-  font-family: Mukta, sans-serif;
-  
-}
-
-h2, p {
-  font-family: Inter, sans-serif;
-}
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
