@@ -8,7 +8,41 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	container: {
+		padding: {
+		  DEFAULT: '1rem',
+		  sm: '2rem',
+		  md: '4rem',
+		  lg: '8rem',
+		  xl: '12.5rem',
+		  '2xl': '16rem',
+		},
+	  },
   	extend: {
+	// 	 spacing: {
+    //     'mobile-margin': '1rem', 
+    //     'tablet-margin': '3.75rem', 
+    //     'laptop-margin': '6.25rem', 
+    //     'desktop-margin': '12.5rem', 
+    //   }, 
+		borderRadius: {
+			'none': '0',
+			'sm': '0.125rem',
+			DEFAULT: '8px',
+			'md': '0.375rem',
+			'lg': '0.5rem',
+			'full': '9999px',
+			'large': '12px',
+		  },
+		  screens: {
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px', 
+			'xs': '480px', 
+			'3xl': '1920px', 
+		  },
   		colors: {
   			black: {
   				'100': '#000319',
@@ -22,7 +56,7 @@ const config: Config = {
 				'300': '#E2E1E1',
   				DEFAULT: '#FFF'
   			},
-  			blue: {
+  			'neptune': {
   				'50': '#f4f9f9',
   				'100': '#dbecea',
   				'200': '#b7d8d7',
@@ -86,10 +120,7 @@ const config: Config = {
   			}
   		},
   		fontFamily: {
-  			mukta: [
-  				'Mukta',
-  				'sans-serif'
-  			],
+  		
   			manrope: [
   				'Manrope',
   				'sans-serif'
@@ -98,24 +129,9 @@ const config: Config = {
   				'Gill Sans',
   				'sans-serif'
   			],
-			roboto: 
-			  ["var(--font-roboto)"],
+			
   		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)',
-			'custom-shape': '60px 0px 60px 60px',
-					
-				
-  		},
-  		screens: {
-  			sm: '325px',
-  			md: '425px',
-  			lg: '768px',
-  			xl: '1024px',
-  			'2px': '1440px'
-  		},
+  		
   		animation: {
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
   		},
