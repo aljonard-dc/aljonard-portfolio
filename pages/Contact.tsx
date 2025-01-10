@@ -6,7 +6,7 @@ import { BiSolidNavigation } from "react-icons/bi";
 const Contact = () => {
   return (
     <section className='relative bg-blue-200 w-full h-[450px] px-5 '>
-      <div className='e-800 w-full h-24 flex justify-center items-end'>
+      <div className='w-full h-24 flex justify-center items-end'>
         <h1 className='text-2xl lg:text-4xl text-center'>Feel free to contact me</h1>
       </div>
       <div className='-600 w-full h-20 flex justify-center items-center'>

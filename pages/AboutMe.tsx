@@ -2,7 +2,8 @@ import { DotPatternBackground } from '@/components/DotPatternBackground'
 import { OrbitingCirclesDemo } from '@/components/OrbitingCirclesDemo';
 import DotPattern from '@/components/ui/dot-pattern'
 import React from 'react'
-import { FaGithub,FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoLogoGithub } from 'react-icons/io';
 
 const AboutMe = () => {
   return (
@@ -29,8 +30,8 @@ const AboutMe = () => {
                     </p>
 
                     <div className='flex items-center gap-4'>
-                        <a target='_blank' href="https://github.com/aljonard-dc"><FaGithub size={32} /></a>
-                        <a target='_blank' href="https://www.linkedin.com/in/aljonard-dela-cruz-69b052317/"><FaLinkedin size={32} /></a>
+                        <a target='_blank' href="https://github.com/aljonard-dc"><IoLogoGithub size={32} /></a>
+                        <a target='_blank' href="https://www.linkedin.com/in/aljonarddelacruz/"><FaLinkedin size={32} /></a>
 
                     </div>
                 </div>   

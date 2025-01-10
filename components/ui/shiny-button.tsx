@@ -32,7 +32,7 @@ const animationProps = {
 interface ShinyButtonProps extends HTMLMotionProps<"a"> {
   children: React.ReactNode;
   className?: string;
-  href: string;
+  href?: string;
 }
 
 const ShinyButton = React.forwardRef<HTMLAnchorElement, ShinyButtonProps>(
