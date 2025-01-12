@@ -14,7 +14,7 @@ const Hero = () => {
       <ParticlesBackground />
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
         {/* left side */}
-        <div className="text-start space-y-5 ">
+        <div className="text-center md:text-start space-y-5 ">
           <h3 className="text-lg sm:text-xl lg:text-2xl uppercase text-neptune-700 mt-10 md:mt-0">Hi There!, I&apos;m</h3>
           <TypingAnimation
             className=" text-neptune-800 text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl font-semibold"
