@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
     <Link
       href={href}
       target={target}
-      className={`flex items-center gap-2 px-4 py-1 text-lg font-manrope font-bold rounded-[10px] ${className}`}
+      className={`flex items-center gap-2 px-4 py-2 text-base font-manrope font-bold rounded-[10px] ${className}`}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
     >
      

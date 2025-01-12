@@ -8,12 +8,12 @@ import { Header } from "@/lib/imports";
 
 export default function Home() {
   return (
-    <main id="home" className="relative overflow-hidden">
-      <Header />
-      
-      
-   
-      {/* <Hero/> */}
+    <main id="home" className="relative overflow-hidden bg-neptune-50">
+      <div className="container mx-auto">
+        <Header />
+        <Hero/>
+      </div>
+     
       {/* <AboutMe/>  */}
       {/* <Projects/> */}
       {/* <Contact/>

@@ -13,8 +13,8 @@ const Header = () => {
     
 
   return (
-   <header className='py-2 fixed inset-x-0 top-0 z-50 w-full bg-neptune-50/80 backdrop-blur-sm shadow-sm'>
-    <div className='container flex items-center justify-between'>
+   <header className='dark:bg-neptune-950 py-2 fixed inset-x-0 top-0 z-50 w-full bg-neptune-50/80 backdrop-blur-sm shadow-sm'>
+    <div className='container mx-auto flex items-center justify-between'>
      <div className='flex items-center gap-4'>
             <Image src="/logo-light.png" alt="logo" width={50} height={50}></Image>
             <div className='flex flex-col'>
