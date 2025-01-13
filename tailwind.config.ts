@@ -13,21 +13,17 @@ const config: Config = {
 		  DEFAULT: '1rem',
 		  sm: '2rem',
 		  md: '4rem',
-		  lg: '8rem',
-		  xl: '12.5rem',
-		  '2xl': '16rem',
+		  lg: '6rem',
+		  xl: '8rem',
+		  '2xl': '10rem',
 		  '3xl': '20rem',
 		  '4xl': '24rem',
 		},
 	  },
   	extend: {
-		 spacing: {
-        'mobile-margin': '1rem', 
-        'tablet-margin': '3.75rem', 
-        'laptop-margin': '6.25rem', 
-        'desktop-margin': '12.5rem', 
-      }, 
+		
 		borderRadius: {
+			'custom-shape': '50px 0px 50px 50px',
 			'none': '0',
 			'sm': '0.125rem',
 			DEFAULT: '8px',
