@@ -10,11 +10,14 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 const Hero = () => {
   return (
-    <section className="relative  bg-neptune-50 flex justify-center items-center h-dvh">
+    <section className="relative bg-neptune-100 flex justify-center items-center h-dvh">
       <ParticlesBackground />
+      <div className='container mx-auto'>
+
+   
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-        {/* left side */}
-        <div className="text-center md:text-start space-y-5 ">
+       
+        <div className="text-center lg:text-start space-y-5">
           <h3 className="text-lg sm:text-xl lg:text-2xl uppercase text-neptune-700 mt-10 md:mt-0">Hi There!, I&apos;m</h3>
           <TypingAnimation
             className=" text-neptune-800 text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl font-semibold"
@@ -42,7 +45,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* right side */}
         <div className="place-items-center lg:place-items-end ">
           <div className='size-8/12 space-y-5'>
           <img
@@ -66,6 +68,7 @@ const Hero = () => {
            
           
         </div>
+      </div>
       </div>
     </section>
   );
