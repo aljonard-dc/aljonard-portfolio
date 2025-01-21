@@ -7,7 +7,7 @@ import { IoLogoGithub } from 'react-icons/io';
 
 const AboutMe = () => {
   return (
-    <section className='bg-white relative flex justify-center items-center h-dvh'>
+    <section className='bg-white relative flex justify-center items-center py-20 min-h-screen'>
       <DotPatternBackground />
  
       <div className='container mx-auto'>
@@ -29,7 +29,7 @@ const AboutMe = () => {
             </div>
           </div>   
 
-          <div className='place-self-center lg:place-self-end justify-self-center lg:justify-self-end'>
+          <div className='place-self-center justify-self-center lg:justify-self-end'>
             <OrbitingCirclesDemo/>
           </div>   
           

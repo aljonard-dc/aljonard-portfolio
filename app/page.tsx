@@ -4,16 +4,19 @@ import AboutMe from "@/pages/AboutMe";
 import Contact from "@/pages/Contact";
 import { Card } from "@/components/Card";
 import { Header } from "@/lib/imports";
+import Service from "@/pages/Service";
 
 export default function Home() {
   return (
     <main id="home" className="relative overflow-hidden">
       
-      <Header />
+      {/* <Header />
       <Hero />
       <AboutMe />
-      <Contact />
-      {/* <Projects /> */}
+      <Service/>
+      <Contact /> */}
+
+      <Projects />
     </main>
   );
 }

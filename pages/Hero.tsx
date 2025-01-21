@@ -10,20 +10,22 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 const Hero = () => {
   return (
-    <section className="relative bg-neptune-100 flex justify-center items-center h-dvh">
+    <section className="relative bg-neptune-100 flex justify-center items-center py-20 min-h-screen">
       <ParticlesBackground />
       <div className='container mx-auto'>
 
    
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
        
-        <div className="text-center lg:text-start space-y-5">
-          <h3 className="text-lg sm:text-xl lg:text-2xl uppercase text-neptune-700 mt-10 md:mt-0">Hi There!, I&apos;m</h3>
-          <TypingAnimation
-            className=" text-neptune-800 text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl font-semibold"
-            text="ALJONARD DELA CRUZ"
-          />
-          <p className="text-base md:text-md  text-gray-700">
+        <div className="text-center lg:text-start space-y-5 w-full">
+          <h3 className="text-xl  uppercase text-neptune-700 mt-10 md:mt-0">Hi There!, I&apos;m</h3>
+          <div className='lg:w-[300px] xl:w-[400px] place-self-center lg:place-self-start'>
+            <TypingAnimation
+              text="ALJONARD DELA CRUZ"
+            />
+          </div>
+          
+          <p className="text-base text-gray-700">
             An aspiring web developer continuously expanding my expertise in modern technologies like React,
             Typescript, and NextJS, while actively seeking hands-on experience in front-end development to enhance my
             skills.

@@ -5,7 +5,7 @@ import { BiSolidNavigation } from "react-icons/bi";
 
 const Contact = () => {
   return (
-    <section className="relative bg-neptune-100 py-10">
+    <section className="relative bg-white py-10">
       <div className='container mx-auto'>
       
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center px-2">
