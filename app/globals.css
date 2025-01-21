@@ -58,6 +58,20 @@
     --chart-5: 340 75% 55%;
   }
 }
+.cursor-blink {
+  display: inline-block;
+  margin-left: 0.05em;
+  color: currentColor;
+  font-weight: bold;
+}
+
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 @layer base {
   * {

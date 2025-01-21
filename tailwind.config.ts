@@ -21,7 +21,16 @@ const config: Config = {
 		},
 	  },
   	extend: {
-		
+		screens: {
+			'xs': '480px', 
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px', 
+			'3xl': '1920px', 
+			'4xl': '2560px',
+		  },
 		borderRadius: {
 			'custom-shape': '50px 0px 50px 50px',
 			'none': '0',
@@ -32,15 +41,7 @@ const config: Config = {
 			'full': '9999px',
 			'large': '12px',
 		  },
-		  screens: {
-			'sm': '640px',
-			'md': '768px',
-			'lg': '1024px',
-			'xl': '1280px',
-			'2xl': '1536px', 
-			'xs': '480px', 
-			'3xl': '1920px', 
-		  },
+		
   		colors: {
   			black: {
   				'100': '#000319',
