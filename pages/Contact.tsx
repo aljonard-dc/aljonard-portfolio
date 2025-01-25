@@ -5,19 +5,20 @@ import { BiSolidNavigation } from "react-icons/bi";
 
 const Contact = () => {
   return (
-    <section className="relative bg-white py-10">
+    <section className="relative bg-neptune-100 py-10">
       <div className='container mx-auto'>
       
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center px-2">
-          
-     
-          <div className="lg:col-span-2 text-center">
-            <h1 className="text-2xl lg:text-4xl">Feel free to contact me</h1>
+          <div className="pb-16 lg:pb-20">
+            <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">Feel free to contact me</h1>
           </div>
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+          
+     
+        
           
      
           <div className="lg:col-span-2 text-center">
-            <p className="text-md">I'm always open to new opportunities and collaborations.</p>
+            <p className="text-md">I&apos;m always open to new opportunities and collaborations.</p>
           </div>
 
          
