@@ -4,12 +4,13 @@ import { ServiceCardContent } from '@/data'
 
 const Service = () => {
   return (
-    <section className="bg-neptune-100 relative flex items-center py-16 ">
+    <section className="bg-neptune-100 relative py-24">
       <div className="container mx-auto">
-        <div className="grid place-content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 place-self-center">
-            <h1 className="text-5xl text-center font-semibold py-10">What I Can Provide?</h1>
+        <div className="pb-16 lg:pb-20">
+            <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold ">What I Can Provide?</h1>
           </div>
+        <div className="grid place-content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        
           {ServiceCardContent.map((content) => (
             <div key={content.id} className="m-auto">
               <ServiceCard

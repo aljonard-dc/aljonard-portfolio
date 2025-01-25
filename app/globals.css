@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+h1{
+  font-weight: 600;
+}
 
 @layer base {
   :root {

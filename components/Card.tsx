@@ -1,62 +1,32 @@
 import Image from 'next/image';
 
-
 export function Card() {
   return (
-    <div className='flex flex-col'>
-
-      <div className='grid grid-cols-10 bg-red-200'>
-
-        <div className=" w-[450px] p-4 mx-auto col-start-3">
-            <div className="bg-gray-200 p-4">
-                <img 
-                className='rounded-lg w-full h-64 object-center'
-                src="/landingpage.png" alt="card" />
-                <h1 className='text-2xl uppercase '>Natura Verde</h1>
-                <h2 className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro 
-                  distinctio in cum quos adipisci alias voluptatem eos expedita! Aliquid
-                 aperiam illum reprehenderit optio, ducimus quasi explicabo vero dolore mollitia perspiciatis.</h2>
-                
-            </div>
+  
+      <div className="max-w-[500px] min-h-[550px] cursor-pointer bg-white p-5 rounded-lg shadow-lg">
+        {/* Image Container - Ang laki nito ang magko-control sa Image */}
+        <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
+          <Image 
+            src="/landingpage.png" 
+            alt="Profile" 
+            layout="fill"
+            objectFit="stretch"
+          />
         </div>
-        <div className=" w-[450px] p-4 mx-auto col-start-6">
-            <div className="bg-gray-200 p-4">
-                <img 
-                className='rounded-lg w-full h-64 object-center'
-                src="/landingpage.png" alt="card" />
-                <h1 className='text-2xl uppercase '>Natura Verde</h1>
-                <h2 className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro 
-                  distinctio in cum quos adipisci alias voluptatem eos expedita! Aliquid
-                 aperiam illum reprehenderit optio, ducimus quasi explicabo vero dolore mollitia perspiciatis.</h2>
-                
-            </div>
+
+        {/* Project Title */}
+        <div className="flex justify-start mt-4">
+          <h1 className="font-mukta text-2xl font-semibold">Project Title</h1>
+        </div>
+
+        {/* Description */}
+        <div className="mt-2">
+          <p className="text-justify text-gray-700">
+            Aljonard Dela Cruz. A recent graduate with a Bachelor&apos;s degree in Information Technology.
+            I&apos;m a front-end developer with a passion for creating user-friendly websites and web applications.
+          </p>
         </div>
       </div>
 
-        <div className=" w-[450px] p-4 mx-auto ">
-            <div className="bg-gray-200 p-4">
-                <img 
-                className='rounded-lg w-full h-64 object-center'
-                src="/landingpage.png" alt="card" />
-                <h1 className='text-2xl uppercase '>Natura Verde</h1>
-                <h2 className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro 
-                  distinctio in cum quos adipisci alias voluptatem eos expedita! Aliquid
-                 aperiam illum reprehenderit optio, ducimus quasi explicabo vero dolore mollitia perspiciatis.</h2>
-                
-            </div>
-        </div>
-        <div className=" w-[450px] p-4 mx-auto ">
-            <div className="bg-gray-200 p-4">
-                <img 
-                className='rounded-lg w-full h-64 object-center'
-                src="/landingpage.png" alt="card" />
-                <h1 className='text-2xl uppercase '>Natura Verde</h1>
-                <h2 className='text-md'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro 
-                  distinctio in cum quos adipisci alias voluptatem eos expedita! Aliquid
-                 aperiam illum reprehenderit optio, ducimus quasi explicabo vero dolore mollitia perspiciatis.</h2>
-                
-            </div>
-        </div>
-    </div>
-  )
+  );
 }
