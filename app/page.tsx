@@ -10,10 +10,14 @@ export default function Home() {
   return (
     <main id="home" className="relative overflow-hidden">
       
-      <Header />
-      {/* <Hero />
+      {/* <Header />
+      <Hero />
       <AboutMe /> */}
+     
+
       <Projects />
+
+
       {/* <Service/>
       <Contact /> */}
 
