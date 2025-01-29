@@ -9,7 +9,7 @@ const Projects = () => {
                   <h1 className='font-mukta text-4xl lg:text-5xl text-center font-semibold'>Projects</h1>
                   <h6 className='text-base text-center'>Here's some of my projects that I have worked on.</h6>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 place-items-center gap-16'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 place-items-center gap-12 xl:gap-16'>
             
             <Card/>
             <Card/>
