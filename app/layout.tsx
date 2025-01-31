@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter,  Roboto } from "next/font/google"; // Import the new fonts
+import { Inter } from "next/font/google"; // Import the new fonts
 import "./globals.css";
 
 // Configure the new fonts
@@ -9,15 +9,11 @@ const inter = Inter({
   weight: ["400", "600", "700"],
 });
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-});
 
 export const metadata: Metadata = {
   title: "Aljonard's Portfolio",
   description: "Modern & Minimalist Portfolio",
+
 };
 
 export default function RootLayout({
@@ -28,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="logo-light.png" type="png"/>
         {/* You can also add meta tags here or links for favicons */}
       </head>
       <body

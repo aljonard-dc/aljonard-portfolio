@@ -4,7 +4,7 @@ import { ServiceCardContent } from '@/data'
 
 const Service = () => {
   return (
-    <section className="bg-neptune-100 relative py-24">
+    <section className="bg-white relative py-24">
       <div className="place-content-center container mx-auto">
         <div className="pb-16 lg:pb-20">
             <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold ">What I Can Provide?</h1>

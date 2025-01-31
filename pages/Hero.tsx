@@ -3,15 +3,16 @@ import ParticlesBackground from '@/components/ui/ParticlesBackground';
 import { TypingAnimation } from '@/components/ui/typing-animation';
 import Button from '@/components/Button';
 import { FiDownload } from 'react-icons/fi';
-
+import Image from 'next/image';
 import { IoLogoGithub } from 'react-icons/io';
 import { FaLinkedin, FaLevelDownAlt } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 
+
 const Hero = () => {
   return (
     <section className="relative bg-neptune-100 grid place-items-center py-24 min-h-screen">
-      {/* <ParticlesBackground /> */}
+      <ParticlesBackground />
       <div className='container mx-auto'>
 
    
@@ -49,7 +50,7 @@ const Hero = () => {
 
         <div className="place-items-center lg:place-items-end ">
           <div className='size-8/12 space-y-5'>
-          <img
+          <Image
                 className=" object-contain"
                 src="profile.png"
                 alt="profile"
