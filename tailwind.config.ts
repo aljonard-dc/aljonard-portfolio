@@ -134,6 +134,7 @@ const config: Config = {
   		animation: {
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
   		},
+
   		keyframes: {
   			orbit: {
   				'0%': {
@@ -143,6 +144,14 @@ const config: Config = {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
   				}
   			}
+
+  		screens: {
+  			sm: '320px',
+  			md: '425px',
+  			lg: '768px',
+  			xl: '1024px',
+  			'2xl': '1440px'
+
   		}
   	}
   },
