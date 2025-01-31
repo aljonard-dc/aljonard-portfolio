@@ -24,7 +24,7 @@ const Contact = () => {
          
           <div className="lg:col-span-2 flex">
             <ShinyButton className="bg-neptune-600 text-blue-50 flex items-center gap-2 mx-auto" href="mailto:aljonarddc@gmail.com">
-              Let's Connect <BiSolidNavigation size={20} />
+              Let&apos;s Connect <BiSolidNavigation size={20} />
             </ShinyButton>
           </div>
 

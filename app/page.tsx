@@ -2,7 +2,6 @@ import Hero from "@/pages/Hero";
 import Projects from "@/pages/Projects";
 import AboutMe from "@/pages/AboutMe";
 import Contact from "@/pages/Contact";
-import { Card } from "@/components/Card";
 import { Header } from "@/lib/imports";
 import Service from "@/pages/Service";
 
@@ -10,18 +9,13 @@ export default function Home() {
   return (
     <main id="home" className="relative overflow-hidden">
       
-      {/* <Header />
+      <Header />
       <Hero />
-      <AboutMe /> */}
-     
-
+      <AboutMe />
       <Projects />
+      <Service/>
+      <Contact />
 
-
-      {/* <Service/>
-      <Contact /> */}
-
-   
     </main>
   );
 }
