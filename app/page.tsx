@@ -1,11 +1,21 @@
-import Hero from "@/app/pages/Hero";
-import Projects from "@/app/pages/Projects";
+import Hero from "@/pages/Hero";
+import Projects from "@/pages/Projects";
+import AboutMe from "@/pages/AboutMe";
+import Contact from "@/pages/Contact";
+import { Header } from "@/lib/imports";
+import Service from "@/pages/Service";
 
 export default function Home() {
   return (
-    <main className="bg-blue-300 overflow-hidden">
-      <Hero/>
-      <Projects/>
+    <main id="home" className="relative overflow-hidden">
+      
+      <Header />
+      <Hero />
+      <AboutMe />
+      <Projects />
+      <Service/>
+      <Contact />
+
     </main>
   );
 }
