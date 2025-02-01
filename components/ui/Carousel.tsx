@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
 
@@ -17,27 +17,30 @@ const Carousel = ({
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
 
-  const next = () =>
+  const next = useCallback(() => {
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+  }, [slides.length]);
 
   useEffect(() => {
     if (!autoSlide) return;
+
     const slideInterval = setInterval(next, autoSlideInterval);
     return () => clearInterval(slideInterval);
-  }, [autoSlide, autoSlideInterval]);
+  }, [autoSlide, autoSlideInterval, next]);
 
   return (
-    <div className="overflow-hidden relative w-full h-full">
+    <div className="overflow-hidden relative w-full h-[200px] md:h-[300px]">
       <div
         className="flex transition-transform ease-out duration-500 w-full h-full"
         style={{ transform: `translateX(-${curr * 100}%)` }}>
         {slides.map((img, index) => (
-          <div key={index} className="relative min-w-full h-[300px]">
+          <div key={index} className="relative min-w-full h-full">
             <Image
               src={img}
               alt={`Slide ${index + 1}`}
               fill
-              className="object-stretch"
+              priority
+              className="object-cover"
             />
           </div>
         ))}
@@ -64,9 +67,9 @@ const Carousel = ({
             <button
               key={i}
               className={`transition-all w-3 h-3 bg-white rounded-full ${
-                curr === i ? "p-2 bg-white-800" : "bg-opacity-50"
+                curr === i ? "p-2 bg-gray-800" : "bg-opacity-50"
               }`}
-              onClick={() => setCurr(i)} 
+              onClick={() => setCurr(i)}
             />
           ))}
         </div>

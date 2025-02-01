@@ -3,22 +3,23 @@ export const navLinks = [
     {
         id:1,
         title:"Home",
-        href:"/"
+        href:"#home"
     },
     {
         id:2,
-        title:"Projects",
-        href:"/projects"
+        title:"About",
+        href:"#about"
     },
     {
         id:3,
-        title:"About",
-        href:"/about"
+        title:"Projects",
+        href:"#projects"
     },
+    
     {
         id:4,
         title:"Contact",
-        href:"/contact"
+        href:"#contact"
     },
     
 ]
@@ -28,7 +29,8 @@ export const ProjectData = [
         id:1, 
         title:"TravelCN",
         description:"A visually captivating website featuring the top landmarks and tourist spots of Camarines Norte, Philippines. Discover the province’s natural wonders, rich culture, and hidden gems through an engaging guide.",
-        link:"https://github.com/aljonard-dc/StMartha-Management-System",
+        github:"https://github.com/aljonard-dc/travelcn",
+        link:"https://travelcn.vercel.app/",
         images:["/travelcn/landingpage.png","/travelcn/destinations.png","/travelcn/festivals.png","/travelcn/trends.png","/travelcn/map.png",],
         tags:[{name:"ReactJS"},{name:"NextJS"},{name:"TypeScript"},{name:"TailwindCSS"}],
     },
@@ -36,7 +38,8 @@ export const ProjectData = [
         id:2, 
         title:"Web-based Reservation Management System",
         description:"The system offers an intuitive and user-friendly website that provides comprehensive information about the resort, a seamless and efficient reservation management system, and an engaging virtual tour of the resort.",
-        link:"https://github.com/aljonard-dc/Resort-Web-based-Reservation-Management-System",
+        github:"https://github.com/aljonard-dc/Resort-Web-based-Reservation-Management-System",
+        link:"https://naturaverde.website",
         images:["/naturaverde/landingpage.png","/naturaverde/gallery.png","/naturaverde/takeatour.png","/naturaverde/daytour-reservation.png",],
         tags:[{name:"HTML"},{name:"CSS"},{name:"Javascript"},{name:"PHP"},{name:"MySQL"},{name:"NodeJS"}],
     },
@@ -44,9 +47,9 @@ export const ProjectData = [
         id:3, 
         title:"St. Martha Management System",
         description:"The St. Martha Memorial Homes, Inc. Management System manages inventory, scheduling, resource tracking, records of departed individuals, funeral inquiries, payments, and report generation with printable receipts.",
-        link:"https://github.com/aljonard-dc/StMartha-Management-System",
+        github:"https://github.com/aljonard-dc/StMartha-Management-System",
         images:["/stmartha/contract.png","/stmartha/landingpage.png","/stmartha/plan.png","/stmartha/print.png",],
-        tags:[{name:"Vb.Net"},{name:"MySQL"},],
+        tags:[{name:"Vb.Net"},{name:"MySQL"},{name:"Bunifu Framework"}],
     }
 ]
 
