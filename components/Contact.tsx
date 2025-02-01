@@ -9,7 +9,7 @@ const Contact = () => {
     <section id="contact" className="relative bg-neptune-100 py-10">
       <div className="container mx-auto">
         <div className="pb-10">
-          <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">
+          <h1 className="font-mukta text-neptune-950 text-4xl lg:text-5xl text-center font-semibold">
             Feel free to contact me
           </h1>
         </div>

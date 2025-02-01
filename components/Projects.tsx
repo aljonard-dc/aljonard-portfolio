@@ -7,10 +7,10 @@ const Projects = () => {
     <section id="projects" className="relative bg-neptune-100 flex flex-col py-24">
       <div className="place-items-center container mx-auto">
         <div className="space-y-4 pb-16 lg:pb-20">
-          <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">
+          <h1 className="text-neptune-950  font-mukta text-4xl lg:text-5xl text-center font-semibold">
             Projects
           </h1>
-          <h6 className="text-base text-center">
+          <h6 className="text-base text-center text-neptune-950 ">
             Here&apos;s some of my projects that I have worked on.
           </h6>
         </div>
