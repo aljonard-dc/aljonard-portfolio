@@ -1,9 +1,9 @@
 import React from 'react'
 import { ServiceCard, ServiceCardContent } from '@/lib/imports';
 
-const Service = ({ id }: { id?: string }) => {
+const Service = () => {
   return (
-    <section id={id} className="bg-white relative py-24">
+    <section id="contact" className="bg-white relative py-24">
       <div className="place-content-center container mx-auto">
         <div className="pb-16 lg:pb-20">
             <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold ">What I Can Provide?</h1>

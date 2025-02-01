@@ -1,7 +1,7 @@
 import Button from "./Button";
 import { IoLogoGithub } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
-import Carousel from "./ui/Carousel";
+import Carousel from "./Carousel";
 import { CardProps } from "@/lib/props";
 
 export default function Card({ title, description, images, tags, github, link }: CardProps) {

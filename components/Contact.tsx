@@ -4,9 +4,9 @@ import { BiSolidNavigation } from "react-icons/bi";
 import Link from "next/link";
 import { ShinyButton } from "@/lib/imports";
 
-const Contact = ({ id }: { id?: string }) => {
+const Contact = () => {
   return (
-    <section id={id} className="relative bg-neptune-100 py-10">
+    <section id="contact" className="relative bg-neptune-100 py-10">
       <div className="container mx-auto">
         <div className="pb-10">
           <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">
