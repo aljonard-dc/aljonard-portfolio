@@ -7,9 +7,9 @@ import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
 import { Button, ParticlesBackground, TypingAnimation } from "@/lib/imports";
 
-const Hero = ({ id }: { id?: string }) => {
+const Hero = () => {
   return (
-    <section id={id} className="relative bg-neptune-100 py-24 min-h-screen flex items-center">
+    <section id="home" className="relative bg-neptune-100 py-24 min-h-screen flex items-center">
       <ParticlesBackground />
       <div className="container mx-auto">
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
