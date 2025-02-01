@@ -3,15 +3,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { TypingAnimationProps } from "@/lib/props";
 
-interface TypingAnimationProps {
-  text: string;
-  typingSpeed?: number;
-  pauseAfterTyping?: number;
-  className?: string;
-}
 
-export function TypingAnimation({
+export default function TypingAnimation({
   text,
   typingSpeed = 150,
   pauseAfterTyping = 1000,

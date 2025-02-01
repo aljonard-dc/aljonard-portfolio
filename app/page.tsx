@@ -1,20 +1,15 @@
-import Hero from "@/pages/Hero";
-import Projects from "@/pages/Projects";
-import AboutMe from "@/pages/AboutMe";
-import Contact from "@/pages/Contact";
-import { Header } from "@/lib/imports";
-import Service from "@/pages/Service";
+import { AboutMe, Contact, Header, Hero, Projects, Service } from "@/lib/imports";
 
 export default function Home() {
   return (
     <main id="home" className="relative overflow-hidden">
       
       <Header />
-      <Hero />
-      <AboutMe />
-      <Projects />
-      <Service/>
-      <Contact />
+      <Hero id="home"/>
+      <AboutMe id="about"/>
+      <Projects id="projects"/>
+      <Service id="contact"/>
+      <Contact id="contact" />
 
     </main>
   );

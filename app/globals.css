@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h1{
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1 {
   font-weight: 600;
 }
 
@@ -68,8 +73,6 @@ h1{
   font-weight: bold;
 }
 
-
-
 @keyframes blink {
   50% {
     opacity: 0;
@@ -84,5 +87,3 @@ h1{
     @apply bg-background text-foreground;
   }
 }
-
-
