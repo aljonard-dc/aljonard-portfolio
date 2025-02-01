@@ -9,10 +9,10 @@ const ServiceCard = ({ icon ,title , description }: iconProps) => {
                 <Image src={icon} alt={title} width={50} height={50}  />
             </div>
             <div>
-                <h1 className='font-mukta text-2xl text-center font-semibold '>{title}</h1>
+                <h1 className='text-neptune-950  font-mukta text-2xl text-center font-semibold '>{title}</h1>
             </div>
             <div>
-                <h2 className='text-center'>{description}</h2>
+                <h2 className='text-neptune-950 text-center'>{description}</h2>
             </div>
     </div>
   )

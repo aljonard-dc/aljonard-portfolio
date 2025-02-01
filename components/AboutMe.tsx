@@ -7,18 +7,18 @@ import { IoLogoGithub } from "react-icons/io";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-white relative py-24 min-h-screen">
+    <section id="about" className="bg-white relative flex items py-24 ">
       <DotPatternBackground />
-      <div className="container mx-auto">
+      <div className=" container mx-auto">
         <div className="pb-16 lg:pb-20">
-          <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">
+          <h1 className="text-neptune-950  font-mukta text-4xl lg:text-5xl text-center font-semibold">
             About Me
           </h1>
         </div>
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 max-w-full mx-auto ">
           <div className="flex flex-col items-center lg:items-start justify-start space-y-5 place-self-center">
             <h1 className="font-mukta text-2xl lg:text-3xl">Hi there 👋</h1>
-            <p className="text-base lg:text-lg text-justify text-gray-700">
+            <p className="text-base lg:text-lg text-justify text-gray-800">
               I&apos;m Aljonard Dela Cruz. A recent graduate with a
               Bachelor&apos;s degree in Information Technology. I&apos;m a
               front-end developer with a passion for creating user-friendly

@@ -10,7 +10,7 @@ export default function Card({ title, description, images, tags, github, link }:
       <Carousel slides={images} />
 
       <div className="text-start mt-2">
-        <h1 className="font-mukta text-xl font-semibold">{title}</h1>
+        <h1 className="text-neptune-950  font-mukta text-xl font-semibold">{title}</h1>
       </div>
 
       <div className="mt-2">
