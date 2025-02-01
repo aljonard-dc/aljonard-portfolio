@@ -2,9 +2,9 @@ import React from "react";
 import { Card, ProjectData } from "@/lib/imports";
 
 
-const Projects = ({ id }: { id?: string }) => {
+const Projects = () => {
   return (
-    <section id={id} className="relative bg-neptune-100 flex flex-col py-24">
+    <section id="projects" className="relative bg-neptune-100 flex flex-col py-24">
       <div className="place-items-center container mx-auto">
         <div className="space-y-4 pb-16 lg:pb-20">
           <h1 className="font-mukta text-4xl lg:text-5xl text-center font-semibold">

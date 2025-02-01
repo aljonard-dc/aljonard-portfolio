@@ -1,13 +1,13 @@
-import { DotPatternBackground } from "@/components/DotPatternBackground";
-import { OrbitingCirclesDemo } from "@/components/OrbitingCircles";
+import { DotPatternBackground } from "@/components/ui/DotPatternBackground";
+import { OrbitingCirclesDemo } from "@/components/ui/OrbitingCircles";
 import Link from "next/link";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 
-const AboutMe = ({ id }: { id?: string }) => {
+const AboutMe = () => {
   return (
-    <section id={id} className="bg-white relative py-24 min-h-screen">
+    <section id="about" className="bg-white relative py-24 min-h-screen">
       <DotPatternBackground />
       <div className="container mx-auto">
         <div className="pb-16 lg:pb-20">
