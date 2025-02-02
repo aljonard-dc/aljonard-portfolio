@@ -7,13 +7,13 @@ import { ShinyButton } from "@/lib/imports";
 const Contact = () => {
   return (
     <section id="contact" className="relative bg-neptune-100 py-10">
-      <div className="container mx-auto">
-        <div className="pb-10">
+      <div className="place-items-center container mx-auto ">
+        <div className="pb-10"> 
           <h1 className="font-mukta text-neptune-950 text-4xl lg:text-5xl text-center font-semibold">
             Feel free to contact me
           </h1>
         </div>
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center max-w-7xl mx-auto">
           <div className="lg:col-span-2 text-center">
             <p className="text-md">
               I&apos;m always open to new opportunities and collaborations.
