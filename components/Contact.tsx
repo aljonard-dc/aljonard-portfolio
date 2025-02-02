@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ShinyButton } from "@/lib/imports";
 import { motion, useInView } from "framer-motion";
 const Contact = () => {
+
+  const currentYear = new Date().getFullYear();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { margin: "-50px" });
 
@@ -76,7 +78,7 @@ const Contact = () => {
             </motion.div>
     
           <div className="lg:col-span-1 text-center lg:text-left text-neptune-800">
-            <h1>© 2024 Aljonard. All rights reserved.</h1>
+            <h1>© {currentYear} Aljonard. All rights reserved.</h1>
           </div>
           <div className=" lg:col-span-1">
             <div className="flex justify-center lg:justify-end gap-4">
