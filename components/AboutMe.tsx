@@ -7,7 +7,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-white relative flex items py-24 ">
+    <section id="about" className="bg-white relative flex items-center py-24 ">
       <DotPatternBackground />
       <div className=" container mx-auto">
         <div className="pb-16 lg:pb-20">
@@ -15,7 +15,7 @@ const AboutMe = () => {
             About Me
           </h1>
         </div>
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 max-w-full mx-auto ">
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           <div className="flex flex-col items-center lg:items-start justify-start space-y-5 place-self-center">
             <h1 className="font-mukta text-2xl lg:text-3xl">Hi there 👋</h1>
             <p className="text-base lg:text-lg text-justify text-gray-800">
