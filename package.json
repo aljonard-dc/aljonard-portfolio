@@ -12,7 +12,7 @@
     "@tsparticles/react": "^3.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.17.0",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.468.0",
     "next": "^15.1.6",
     "node-modules": "^0.0.1",
