@@ -6,11 +6,11 @@ import { CardProps } from "@/lib/props";
 
 export default function Card({ title, description, images, tags, github, link }: CardProps) {
   return (
-    <div className="max-w-[550px] cursor-pointer bg-white p-3 md:p-5 rounded-lg shadow-lg">
+    <div className="max-w-[550px] cursor-pointer bg-white p-3 md:p-5 rounded-lg shadow-lgz">
       <Carousel slides={images} />
 
       <div className="text-start mt-2">
-        <h1 className="text-neptune-950  font-mukta text-xl font-semibold">{title}</h1>
+        <h1 className="text-neptune-900  font-mukta text-xl font-semibold">{title}</h1>
       </div>
 
       <div className="mt-2">
@@ -21,7 +21,7 @@ export default function Card({ title, description, images, tags, github, link }:
         {tags.map((tag, idx) => (
           <div
             key={idx}
-            className="px-4 py-1 text-neptune-500 font-semibold bg-neptune-100 rounded-full text-xs border border-neptune-200">
+            className="px-4 py-1 text-neptune-900 font-semibold bg-neptune-100 rounded-full border border-neptune-300 text-xs">
             {tag.name}
           </div>
         ))}
@@ -31,7 +31,7 @@ export default function Card({ title, description, images, tags, github, link }:
       <div className="mt-6 flex justify-start gap-2">
         {github && (
           <Button
-            className="flex-row-reverse bg-gray-200 hover:bg-gray-300"
+            className="flex-row-reverse text-neptune-800 hover:text-neptune-100 bg-neptune-100 hover:bg-neptune-800 border border-neptune-200 hover:border-neptune-900"
             title="View Code"
             target="_blank"
             href={github}
@@ -40,7 +40,7 @@ export default function Card({ title, description, images, tags, github, link }:
         )}
         {link && (
           <Button
-            className="flex-row-reverse bg-gray-200 hover:bg-gray-300"
+            className="flex-row-reverse text-neptune-800 hover:text-neptune-100 bg-neptune-100 hover:bg-neptune-800 border border-neptune-200 hover:border-neptune-900"
             title="Visit"
             target="_blank"
             href={link}
