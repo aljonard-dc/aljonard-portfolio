@@ -5,9 +5,11 @@ import { OrbitingCirclesDemo } from "@/components/ui/OrbitingCircles";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
-import { motion, useInView } from "framer-motion";
+import {motion, useInView } from 'framer-motion';
+
 
 const AboutMe = () => {
+  
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { margin: "-50px" });
 
@@ -25,6 +27,7 @@ const AboutMe = () => {
       },
     },
   };
+  
   const containerVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
@@ -37,7 +40,7 @@ const AboutMe = () => {
     hover: {
       scale: 1.1,
       transition: {
-        type: "tween",
+        type: 'tween', 
         duration: 0.2,
         ease: "easeInOut",
       },
@@ -53,8 +56,7 @@ const AboutMe = () => {
           initial={"hidden"}
           animate={isInView ? "visible" : "hidden"}
           exit={"hidden"}
-          className="pb-16 lg:pb-20"
-        >
+          className="pb-16 lg:pb-20">
           <h1 className="text-neptune-900  font-mukta text-4xl lg:text-5xl text-center font-semibold">
             About Me
           </h1>
@@ -64,7 +66,7 @@ const AboutMe = () => {
             ref={sectionRef}
             variants={containerVariants}
             initial={"hidden"}
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInView ? 'visible' : 'hidden'}
             exit={"hidden"}
             className="flex flex-col items-center lg:items-start justify-start space-y-5 place-self-center">
             <h1 className="text-neptune-900 font-mukta text-2xl lg:text-3xl">
@@ -113,15 +115,10 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            ref={sectionRef}
-            variants={containerVariants}
-            initial={"hidden"}
-            animate={isInView ? "visible" : "hidden"}
-            exit={"hidden"}
+          <div
             className="w-full flex justify-center lg:justify-end">
             <OrbitingCirclesDemo />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

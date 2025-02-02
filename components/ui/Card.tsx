@@ -31,7 +31,7 @@ export default function Card({ title, description, images, tags, github, link }:
       <div className="mt-6 flex justify-start gap-2">
         {github && (
           <Button
-            className="flex-row-reverse text-neptune-800 hover:text-neptune-100 bg-neptune-100 hover:bg-neptune-800 border border-neptune-200 hover:border-neptune-900"
+            className="flex-row-reverse text-neptune-50 hover:text-neptune-100 bg-neptune-500 hover:bg-neptune-800 border border-neptune-500 hover:border-neptune-900"
             title="View Code"
             target="_blank"
             href={github}
@@ -40,7 +40,7 @@ export default function Card({ title, description, images, tags, github, link }:
         )}
         {link && (
           <Button
-            className="flex-row-reverse text-neptune-800 hover:text-neptune-100 bg-neptune-100 hover:bg-neptune-800 border border-neptune-200 hover:border-neptune-900"
+            className="flex-row-reverse text-neptune-50 hover:text-neptune-100 bg-neptune-500 hover:bg-neptune-800 border border-neptune-500 hover:border-neptune-900"
             title="Visit"
             target="_blank"
             href={link}
