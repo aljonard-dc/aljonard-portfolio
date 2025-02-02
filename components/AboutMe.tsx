@@ -116,7 +116,7 @@ const AboutMe = () => {
           </motion.div>
 
           <div
-            className="w-full flex justify-center lg:justify-end">
+            className="flex justify-center lg:justify-end">
             <OrbitingCirclesDemo />
           </div>
         </div>

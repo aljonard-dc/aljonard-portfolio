@@ -11,6 +11,7 @@ export interface OrbitingCirclesProps {
   delay?: number;
   radius?: number;
   path?: boolean;
+  isPaused?: boolean; // New prop to control pause state
 }
 
 export default function OrbitingCircles({
@@ -21,6 +22,7 @@ export default function OrbitingCircles({
   delay = 10,
   radius = 50,
   path = true,
+  isPaused = false, // Default to false (not paused)
 }: OrbitingCirclesProps) {
   return (
     <>
@@ -42,20 +44,18 @@ export default function OrbitingCircles({
       )}
 
       <div
-        style={
-          {
-            "--duration": duration,
-            "--radius": radius,
-            "--delay": -delay,
-          } as React.CSSProperties
-        }
+        style={{
+          "--duration": duration,
+          "--radius": radius,
+          "--delay": -delay,
+        } as React.CSSProperties}
         className={cn(
-          "absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",
-          { "[animation-direction:reverse]": reverse },
+          "absolute flex items-center justify-center rounded-full transform-gpu animate-orbit border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",
+          { "[animation-direction:reverse]": reverse, "paused": isPaused }, // Apply "paused" class if isPaused
           className
         )}
       >
-        {children}
+        <div className="flex items-center justify-center">{children}</div>
       </div>
     </>
   );
@@ -65,6 +65,8 @@ export function OrbitingCirclesDemo() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [outerCircleRadius, setOuterCircleRadius] = useState(190);
   const [innerCircleRadius, setInnerCircleRadius] = useState(50);
+  const [paused, setPaused] = useState(false); // State to track whether the animation is paused
+  const [activeCircle, setActiveCircle] = useState<"inner" | "outer" | null>(null); // Track which circle is active
 
   useEffect(() => {
     const updateCircleRadii = () => {
@@ -80,72 +82,156 @@ export function OrbitingCirclesDemo() {
     return () => window.removeEventListener("resize", updateCircleRadii);
   }, []);
 
+  // Handle icon click to toggle pause/resume
+  const handleIconClick = (circleType: "inner" | "outer") => {
+    if (activeCircle === circleType) {
+      setPaused(!paused); // Toggle paused state
+    } else {
+      setActiveCircle(circleType); // Set the active circle to the clicked one
+      setPaused(false); // Unpause if switching between inner/outer circle
+    }
+  };
+
   return (
     <div
       ref={containerRef}
-      className="relative w-[500px] h-[500px] bg-none xl:bg-neptune-50 rounded-none xl:rounded-custom-shape"
+      className="relative w-[500px] h-[500px] bg-neptune-50 rounded-custom-shape"
     >
-      {/* Inner Circles */}
-      <OrbitingCircles className="border-none bg-transparent" duration={20} delay={5} radius={innerCircleRadius}>
-        <Icons.tsIcon />
-      </OrbitingCircles>
+      <div className="relative flex items-center justify-center w-full h-full">
+        {/* Inner Circles */}
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          duration={20}
+          delay={5}
+          radius={innerCircleRadius}
+          isPaused={paused && activeCircle === "inner"} // Pause inner circle animation when paused
+        >
+          <Icons.tsIcon onClick={() => handleIconClick("inner")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" duration={20} delay={10} radius={innerCircleRadius}>
-        <Icons.reactjsIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          duration={20}
+          delay={10}
+          radius={innerCircleRadius}
+          isPaused={paused && activeCircle === "inner"}
+        >
+          <Icons.reactjsIcon onClick={() => handleIconClick("inner")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" duration={20} delay={15} radius={innerCircleRadius}>
-        <Icons.javascriptIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          duration={20}
+          delay={15}
+          radius={innerCircleRadius}
+          isPaused={paused && activeCircle === "inner"}
+        >
+          <Icons.javascriptIcon onClick={() => handleIconClick("inner")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" duration={20} delay={20} radius={innerCircleRadius}>
-        <Icons.nextjsIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          duration={20}
+          delay={20}
+          radius={innerCircleRadius}
+          isPaused={paused && activeCircle === "inner"}
+        >
+          <Icons.nextjsIcon onClick={() => handleIconClick("inner")} />
+        </OrbitingCircles>
 
-      {/* Outer Circles (reverse) - Dynamic radius */}
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={3} reverse>
-        <Icons.css3Icon />
-      </OrbitingCircles>
+        {/* Outer Circles (reverse) */}
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={3}
+          reverse
+          isPaused={paused && activeCircle === "outer"} // Pause outer circle animation when paused
+        >
+          <Icons.css3Icon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={6} reverse>
-        <Icons.tailwindcssIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={6}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.tailwindcssIcon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={9} reverse>
-        <Icons.html5Icon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={9}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.html5Icon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={12} reverse>
-        <Icons.gitIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={12}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.gitIcon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={15} reverse>
-        <Icons.gitHubIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={15}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.gitHubIcon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={17.5} reverse>
-        <Icons.phpIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={17.5}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.phpIcon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
 
-      <OrbitingCircles className="border-none bg-transparent" radius={outerCircleRadius} duration={20} delay={20.5} reverse>
-        <Icons.mysqlIcon />
-      </OrbitingCircles>
+        <OrbitingCircles
+          className="border-none bg-transparent"
+          radius={outerCircleRadius}
+          duration={20}
+          delay={20.5}
+          reverse
+          isPaused={paused && activeCircle === "outer"}
+        >
+          <Icons.mysqlIcon onClick={() => handleIconClick("outer")} />
+        </OrbitingCircles>
+      </div>
     </div>
   );
 }
 
+
 const Icons = {
-  tailwindcssIcon: () => <Image src="/tailwindcss.svg" alt="Tailwind CSS" width={50} height={50} />,
-  gitHubIcon: () => <Image src="/github.svg" alt="GitHub" width={40} height={40} />,
-  css3Icon: () => <Image src="/css3.svg" alt="CSS3" width={40} height={40} />,
-  gitIcon: () => <Image src="/git.svg" alt="Git" width={50} height={50} />,
-  javascriptIcon: () => <Image src="/js.svg" alt="JavaScript" width={40} height={40} />,
-  html5Icon: () => <Image src="/html5.svg" alt="HTML5" width={45} height={45} />,
-  phpIcon: () => <Image src="/php.svg" alt="PHP" width={50} height={50} />,
-  mysqlIcon: () => <Image src="/mysql.svg" alt="MySQL" width={60} height={60} />,
-  nextjsIcon: () => <Image src="/nextjs.svg" alt="Next.js" width={40} height={40} />,
-  reactjsIcon: () => <Image src="/react.svg" alt="React.js" width={40} height={40} />,
-  tsIcon: () => <Image src="/tslogo.svg" alt="TypeScript" width={50} height={50} />,
+  tailwindcssIcon: ({ onClick }: { onClick: () => void }) => <Image src="/tailwindcss.svg" alt="Tailwind CSS" width={50} height={50} onClick={onClick} className="cursor-pointer"/>,
+  gitHubIcon: ({ onClick }: { onClick: () => void }) => <Image src="/github.svg" alt="GitHub" width={40} height={40} onClick={onClick} className="cursor-pointer" />,
+  css3Icon: ({ onClick }: { onClick: () => void }) => <Image src="/css3.svg" alt="CSS3" width={40} height={40} onClick={onClick} className="cursor-pointer" />,
+  gitIcon: ({ onClick }: { onClick: () => void }) => <Image src="/git.svg" alt="Git" width={50} height={50} onClick={onClick} className="cursor-pointer" />,
+  javascriptIcon: ({ onClick }: { onClick: () => void }) => <Image src="/js.svg" alt="JavaScript" width={40} height={40} onClick={onClick} className="cursor-pointer" />,
+  html5Icon: ({ onClick }: { onClick: () => void }) => <Image src="/html5.svg" alt="HTML5" width={45} height={45} onClick={onClick} className="cursor-pointer" />,
+  phpIcon: ({ onClick }: { onClick: () => void }) => <Image src="/php.svg" alt="PHP" width={50} height={50} onClick={onClick} className="cursor-pointer" />,
+  mysqlIcon: ({ onClick }: { onClick: () => void }) => <Image src="/mysql.svg" alt="MySQL" width={60} height={60} onClick={onClick} className="cursor-pointer" />,
+  nextjsIcon: ({ onClick }: { onClick: () => void }) => <Image src="/nextjs.svg" alt="Next.js" width={40} height={40} onClick={onClick} className="cursor-pointer" />,
+  reactjsIcon: ({ onClick }: { onClick: () => void }) => <Image src="/react.svg" alt="React.js" width={40} height={40} onClick={onClick} className="cursor-pointer" />,
+  tsIcon: ({ onClick }: { onClick: () => void }) => <Image src="/tslogo.svg" alt="TypeScript" width={50} height={50} onClick={onClick} className="cursor-pointer" />,
 };
-
-
