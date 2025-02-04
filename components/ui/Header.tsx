@@ -54,13 +54,18 @@ const Header = () => {
     <header className="dark:bg-neptune-950 py-2 fixed inset-x-0 top-0 z-50 w-full bg-neptune-50/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center gap-4">
+    
+          <Link 
+          className="flex items-center gap-4"
+          href="#home">
           <Image src="/images/logo-light.png" alt="logo" width={50} height={50} />
           <div className="flex flex-col">
             <span className="text-base font-semibold text-neptune-950">Aljonard</span>
             <span className="text-base font-semibold">Dela Cruz</span>
           </div>
-        </div>
+          </Link>
+          
+        
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
