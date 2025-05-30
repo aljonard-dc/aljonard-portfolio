@@ -72,7 +72,7 @@ const AboutMe = () => {
             <h1 className="text-neptune-900 font-mukta text-2xl lg:text-3xl">
               Hi there 👋
             </h1>
-            <p className="text-base lg:text-lg text-justify text-neptune-700">
+            <p className="text-sm md:text-base lg:text-lg text-justify text-neptune-700">
               I&apos;m Aljonard Dela Cruz, a graduate with a Bachelor&apos;s degree in
               Information Technology. I&apos;m a front-end developer passionate about
               creating user-friendly websites and web applications. Currently,
