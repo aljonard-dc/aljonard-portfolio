@@ -28,6 +28,42 @@ export const navLinks = [
 export const ProjectData = [
   {
     id: 1,
+    title: "Ordering System",
+    description:
+      "A multi-branch ordering platform for tracking lechon and restaurant orders with real-time monitoring, deposit and balance computation, and role-based access for staff and admins.",
+    images: [
+      "/orderingsystem/dashboard.png",
+      "/orderingsystem/listanorder.png",
+      "/orderingsystem/manageitem.png",
+      "/orderingsystem/detailedorders.png",
+      "/orderingsystem/login.png",
+    ],
+
+    tags: [
+      { name: "NextJS" },
+      { name: "TypeScript" },
+      { name: "TailwindCSS" },
+      { name: "MongoDB" },
+      { name: "Cloudinary" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Daily Lesson Log Generator",
+    description:
+      "A web-based tool that automates Daily Lesson Log creation for teachers with customizable subjects, sections, and printable documents, improving efficiency and reducing manual work.",
+    images: ["/dll/landingpage.png", "/dll/preview.png"],
+    tags: [
+      { name: "NextJS" },
+      { name: "TypeScript" },
+      { name: "TailwindCSS" },
+      { name: "MongoDB" },
+      { name: "FileViewer" },
+    ],
+  },
+
+  {
+    id: 3,
     title: "E-PANDAYALITA",
     description:
       "E-PANDAYALITA is an online dictionary dedicated to preserving the traditional language of blacksmithing in the Philippines. It serves as an accessible platform for students, artisans, and enthusiasts to explore terms used in crafting bladed tools and metalworks.",
@@ -48,11 +84,11 @@ export const ProjectData = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: "School Information System",
     description:
       "A centralized platform for managing academic records with role-based dashboards, enrollment tracking, subject management, and printable reports for schools.",
-    github: "https://github.com/aljonard-dc/schoolinformationrecordsystem",
+    github: "https://github.com/aljonard-dc/SchoolInformationSytem",
     images: [
       "/schoolinfo/Admin%20Dashboard.png",
       "/schoolinfo/Instructor%20Dashboard.png",
@@ -64,7 +100,7 @@ export const ProjectData = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: "TravelCN",
     description:
       "A visually captivating website featuring the top landmarks and tourist spots of Camarines Norte, Philippines. Discover the province’s natural wonders, rich culture, and hidden gems through an engaging guide.",
@@ -85,7 +121,7 @@ export const ProjectData = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "Web-based Reservation Management System",
     description:
       "The system offers an intuitive and user-friendly website that provides comprehensive information about the resort, a seamless and efficient reservation management system, and an engaging virtual tour of the resort.",
@@ -108,7 +144,7 @@ export const ProjectData = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "St. Martha Management System",
     description:
       "The St. Martha Memorial Homes, Inc. Management System manages inventory, scheduling, resource tracking, records of departed individuals, funeral inquiries, payments, and report generation with printable receipts.",
