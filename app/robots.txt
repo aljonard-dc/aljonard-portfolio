@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aljonarddelacruz.vercel.app/sitemap.xml
+Sitemap: https://aljonarddelacruz.online/sitemap.xml
