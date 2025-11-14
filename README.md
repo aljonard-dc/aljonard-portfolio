@@ -25,7 +25,7 @@ This portfolio is built using:
 
 ## 🌐 Live Demo
 
-Check out the live version here: [Click here to view](https://aljonarddelacruz.vercel.app/)
+Check out the live version here: [Click here to view](https://aljonarddelacruz.online/)
 
 ---
 

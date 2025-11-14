@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     title: "Aljonard Dela Cruz | Web Developer Portfolio",
     description:
       "Showcasing the creative and technical works of Aljonard Dela Cruz — building responsive, modern, and efficient websites with Next.js and React.",
-    url: "https://aljonarddelacruz.vercel.app",
+    url: "https://aljonarddelacruz.online",
     siteName: "Aljonard Dela Cruz Portfolio", 
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://aljonarddelacruz.vercel.app/favicon.ico",
+        url: "https://aljonarddelacruz.online/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Aljonard Dela Cruz Portfolio Preview",
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   verification: {
     google: "qgs_Q3VI5z3X2Y6joN9QTUADCiMjdtPv-zAVNxs2uAQ",
   },
-  metadataBase: new URL("https://aljonarddelacruz.vercel.app"),
+  metadataBase: new URL("https://aljonarddelacruz.online"),
   alternates: {
-    canonical: "https://aljonarddelacruz.vercel.app",
+    canonical: "https://aljonarddelacruz.online",
   },
   icons: {
     icon: "/favicon.ico", 
