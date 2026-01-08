@@ -48,15 +48,15 @@ export const metadata: Metadata = {
     description:
       "Showcasing the creative and technical works of Aljonard Dela Cruz — building responsive, modern, and efficient websites with Next.js and React.",
     url: "https://aljonarddelacruz.online",
-    siteName: "Aljonard Dela Cruz Portfolio", 
+    siteName: "Aljonard Dela Cruz Portfolio",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://aljonarddelacruz.online/favicon.ico",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Aljonard Dela Cruz Portfolio Preview",
+        alt: "Aljonard Dela Cruz — Web Developer Portfolio",
       },
     ],
   },
@@ -68,9 +68,14 @@ export const metadata: Metadata = {
     canonical: "https://aljonarddelacruz.online",
   },
   icons: {
-    icon: "/favicon.ico", 
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
   },
 };
 
