@@ -35,6 +35,9 @@ export default function Card({ title, description, images, tags, github, link }:
             title="View Code"
             target="_blank"
             href={github}
+            onClick={() => {
+              window.umami?.track(`${github} + "card-github_click"`);
+            }}
             icon={<IoLogoGithub />}
           />
         )}
@@ -43,6 +46,9 @@ export default function Card({ title, description, images, tags, github, link }:
             className="flex-row-reverse text-neptune-50 hover:text-neptune-100 bg-neptune-500 hover:bg-neptune-800 border border-neptune-500 hover:border-neptune-900"
             title="Visit"
             target="_blank"
+            onClick={() => {
+              window.umami?.track(`${link} + "visit-link_click"`);
+            }}
             href={link}
             icon={<TbWorld />}
           />
