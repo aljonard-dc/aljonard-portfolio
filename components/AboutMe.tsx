@@ -95,6 +95,9 @@ const AboutMe = () => {
                   href="https://github.com/aljonard-dc"
                   rel="noopener noreferrer"
                   aria-label="Visit my Github profile"
+                  onClick={() => {
+                    window.umami?.track("about-github_profile_click");
+                  }}
                   className="text-neptune-950 hover:text-neptune-600 transition duration-200"
                 >
                   <IoLogoGithub size={40} />
@@ -110,6 +113,9 @@ const AboutMe = () => {
                   href="https://www.linkedin.com/in/aljonarddelacruz/"
                   rel="noopener noreferrer"
                   aria-label="Visit my LinkedIn profile"
+                  onClick={() => {
+                    window.umami?.track("about-linkedin_profile_click");
+                  }}
                   className="text-neptune-950 hover:text-neptune-600 transition duration-200"
                 >
                   <FaLinkedin size={40} />
