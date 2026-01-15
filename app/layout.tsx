@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -86,6 +87,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="d026529d-3b32-4694-a362-f0c7ff21887d"
+          strategy="afterInteractive"
+        />
       <body className={`${inter.variable} antialiased`}>
         {children}
         <SpeedInsights />

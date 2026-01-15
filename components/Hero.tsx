@@ -70,6 +70,9 @@ const Hero = () => {
                   title="Resume"
                   href="/resume/DELACRUZ_ALJONARD_RESUME.pdf"
                   target="_blank"
+                  onClick={() => {
+                    window.umami?.track("resume_download_click");
+                  }}
                   icon={<FiDownload />}
                 />
               </motion.div>
@@ -78,6 +81,9 @@ const Hero = () => {
                   className="border text-neptune-50 bg-neptune-700 hover:border-neptune-900 hover:bg-neptune-900"
                   title="Go to Projects"
                   href="#projects"
+                  onClick={() => {
+                    window.umami?.track("go_to_projects_click");
+                  }}
                   icon={<FaLevelDownAlt />}
                 />
               </motion.div>
@@ -108,6 +114,9 @@ const Hero = () => {
                     href="https://github.com/aljonard-dc"
                     rel="noopener noreferrer"
                     aria-label="Visit my GitHub profile"
+                    onClick={() => {
+                      window.umami?.track("hero-github_profile_click");
+                    }}
                     className="text-neptune-950 hover:text-neptune-700 transition duration-200"
                   >
                     <IoLogoGithub size={28} />
@@ -122,6 +131,9 @@ const Hero = () => {
                     target="_blank"
                     href="https://www.linkedin.com/in/aljonarddelacruz/"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      window.umami?.track("hero-linkedin_profile_click");
+                    }}
                     aria-label="Visit my LinkedIn profile"
                     className="text-neptune-950 hover:text-neptune-700 transition duration-200"
                   >
@@ -137,6 +149,9 @@ const Hero = () => {
                     target="_blank"
                     href="mailto:aljonarddc@gmail.com"
                     aria-label="Send Email to my email address"
+                    onClick={() => {
+                      window.umami?.track("hero-email_click");
+                    }}
                     rel="noopener noreferrer"
                     className="text-neptune-950 hover:text-neptune-700 transition duration-200"
                   >
