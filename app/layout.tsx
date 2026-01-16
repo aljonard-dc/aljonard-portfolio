@@ -72,6 +72,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
@@ -87,11 +88,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="d026529d-3b32-4694-a362-f0c7ff21887d"
-          strategy="afterInteractive"
-        />
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="d026529d-3b32-4694-a362-f0c7ff21887d"
+        strategy="afterInteractive"
+      />
       <body className={`${inter.variable} antialiased`}>
         {children}
         <SpeedInsights />
